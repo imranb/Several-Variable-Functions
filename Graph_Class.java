@@ -1,3 +1,7 @@
+/** 
+ * Agon Bllaca, Imran Berisha
+ * /
+
 import javax.swing.*;
 import java.text.*;
 import java.awt.*;
@@ -55,28 +59,28 @@ public class Graph_Class extends JPanel {
 		g2.setStroke(stroke);
 		g2.draw(path);
 		g.setColor(Color.black);
-		g.drawString("Rritje për " + (vlerat[1] - vlerat[0]) + " në periudhen " + test.getVitet() + " vjeçare", 40,
+		g.drawString("Rritje pÃ«r " + (vlerat[1] - vlerat[0]) + " nÃ« periudhen " + test.getVitet() + " vjeÃ§are", 40,
 				290);
 
 	}
 
 	public static void llogarit_rritjen() {
-		test.setAnual(new Double(JOptionPane.showInputDialog("Shënoni Përqindjen Anuale(Vjetore) : ")));
-		test.setPresent_Population(new Integer(JOptionPane.showInputDialog("Shënoni numrin e popullsisë : ")));
-		test.setVitet(new Integer(JOptionPane.showInputDialog("Shënoni Distancën Kohore) : ")));
+		test.setAnual(new Double(JOptionPane.showInputDialog("ShÃ«noni PÃ«rqindjen Anuale(Vjetore) : ")));
+		test.setPresent_Population(new Integer(JOptionPane.showInputDialog("ShÃ«noni numrin e popullsisÃ« : ")));
+		test.setVitet(new Integer(JOptionPane.showInputDialog("ShÃ«noni DistancÃ«n Kohore) : ")));
 	}
 
 	public static void llogarit_perqindjen() {
 		test.setPresent_Population(
-				new Integer(JOptionPane.showInputDialog("Shënoni numrin e popullsisë në kohë të mëhershme : ")));
+				new Integer(JOptionPane.showInputDialog("ShÃ«noni numrin e popullsisÃ« nÃ« kohÃ« tÃ« mÃ«hershme : ")));
 		test.setFuture_Population(
-				new Integer(JOptionPane.showInputDialog("Shënoni numrin e popullsisë në kohë të mëvonshme : ")));
+				new Integer(JOptionPane.showInputDialog("ShÃ«noni numrin e popullsisÃ« nÃ« kohÃ« tÃ« mÃ«vonshme : ")));
 	}
 
 	public static void main(String[] args) {
 
 		int i = new Integer(JOptionPane.showInputDialog(
-				"Zgjidhni opcionin e dëshiruar\n1: LLogarit rritjen e popullsisë në bazë të\n përqindjes anuale\n2: LLogarit përqindjen e rritjes së popullsisë"));
+				"Zgjidhni opcionin e dÃ«shiruar\n1: LLogarit rritjen e popullsisÃ« nÃ« bazÃ« tÃ«\n pÃ«rqindjes anuale\n2: LLogarit pÃ«rqindjen e rritjes sÃ« popullsisÃ«"));
 		DecimalFormat formato = new DecimalFormat("0.00");
 		if (i == 1) {
 			llogarit_rritjen();
@@ -94,7 +98,7 @@ public class Graph_Class extends JPanel {
 		} else if (i == 2) {
 			llogarit_perqindjen();
 			JOptionPane.showMessageDialog(null,
-					"Përqindja e rritjes së popullatës është " + formato.format(test.kalkulo_perqindjen()));
+					"PÃ«rqindja e rritjes sÃ« popullatÃ«s Ã«shtÃ« " + formato.format(test.kalkulo_perqindjen()));
 		} else {
 			System.exit(0);
 		}
